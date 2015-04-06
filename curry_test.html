@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <style type="text/css">
+	Function.prototype.curry = function() {
+		var slice = Array.prototype.slice;
+		var args = slice.apply(arguments);
+		var that = this;
+		return function() {
+			return that.apply(null, args.concat(slice.apply(arguments)));
+		};
+	}
+
+	var sum = function(a, b) {
+	return a+b;
+	}
+
+	var sum1 = sum.curry(1);
+	alert(sum1(5));
+	alert(sum1(3));
+
+  </style>
+ </body>
+</html>
