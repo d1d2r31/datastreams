@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <style type="text/css">
+	function outter(){
+		var title = '클로저 테스트';  
+		return function(){        
+			alert(title);  <!-- 내부함수에서 외부함수의 지역변수 title을 사용할수있고 -->
+			}
+		}
+	inner = outter(); 
+	inner();
+  </style>
+ </body>
+</html>
